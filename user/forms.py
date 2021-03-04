@@ -18,7 +18,7 @@ class UserUpadateForm(forms.ModelForm):
         model = User
         fields = ['usrname' , 'email']
 
-class ProfileUpadteForm(forms.Modelsform):
+class ProfileUpadteForm(forms.ModelForm):
     class meta:
         model = Profile
         fields = ['image']
