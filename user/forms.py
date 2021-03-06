@@ -1,24 +1,24 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile
+from . models import Profile
 
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
 
-    class meta:
+    class Meta:
         model = User
-        fields = ['usrname' , 'email','password1','password2']
+        fields = ['username', 'email', 'password1', 'password2']
 
-
-class UserUpadateForm(forms.ModelForm):
+# model form -> allows us to create a form that works with a specific database model
+class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
-    class meta:
+    class Meta:
         model = User
-        fields = ['usrname' , 'email']
+        fields = ['username', 'email']
 
-class ProfileUpadteForm(forms.ModelForm):
-    class meta:
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
         model = Profile
         fields = ['image']

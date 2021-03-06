@@ -6,12 +6,12 @@
     <div class="content-section">
         <form method="POST">
         <!--CSRF token -> Cross Site Request Forgery Token-->
-            {% csrf_token %}
+            {%csrf_token%}
 
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Blog Post</legend>
 
-                {{ form | crispy }}
+                {{ form|crispy }}
 
             </fieldset>
 
