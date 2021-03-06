@@ -1,10 +1,10 @@
-{% extends 'blog/base.html' %}
+{%extends 'blog/base.html'%}
 
-{% block content %}
+{%block content%}
 
     <h1 class="mb-3">Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
 
-    {% for post in posts %}
+    {%for post in posts%}
         <article class="media content-section">
 
             <img class="rounded-circle article-img mt-2" src="{{ post.author.profile.image.url }}">
@@ -20,35 +20,35 @@
                 <p class="article-content">{{ post.content }}</p>
             </div>
         </article>
-    {% endfor %}
+    {%endfor%}
 
-    {% if is_paginated %}
+    {%if is_paginated%}
         <!-- First and Previous page button-->
-        {% if page_obj.has_previous %}
+        {%if page_obj.has_previous%}
             <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
             <a class="btn btn-outline-info mb-4" href="?page= {{ page_obj.previous_page_number }}">Previous</a>
 
-        {% endif %}
+        {%endif%}
 
         <!-- Surrounding pages buttons-->
-        {% for num in page_obj.paginator.page_range %}
-            {% if page_obj.number == num %}
+        {%for num in page_obj.paginator.page_range%}
+            {%if page_obj.number == num%}
                 <a class="btn btn-info mb-4" href="?page= {{ num }}"> {{ num }} </a>
 
-            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %} <!-- Django filter -->
+            {%elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'%} <!-- Django filter -->
                 <a class="btn btn-outline-info mb-4" href="?page= {{ num }}"> {{ num }} </a>
 
-            {% endif %}
+            {%endif%}
 
-        {% endfor %}
+        {%endfor%}
 
         <!-- Next and Last page button -->
-        {% if page_obj.has_next %}
+        {%if page_obj.has_next%}
             <a class="btn btn-outline-info mb-4" href="?page= {{ page_obj.next_page_number }}">Next</a>
             <a class="btn btn-outline-info mb-4" href="?page= {{ page_obj.paginator.num_pages }}">Last</a>
             
-        {% endif %}
+        {%endif%}
 
-    {% endif %}
+    {%endif%}
 
-{% endblock content %}
+{%endblock content%}
