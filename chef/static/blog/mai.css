@@ -1,5 +1,5 @@
 body {
-    background: #fafafa;
+    background: #837878;
     color: #333333;
     margin-top: 5rem;
   }
@@ -9,7 +9,7 @@ body {
   }
   
   ul {
-    margin: 0;
+    margin: 1;
   }
   
   .bg-steel {
@@ -17,11 +17,11 @@ body {
   }
   
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #000000;
   }
   
   .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
+    color: #000000;
   }
   
   .site-header .navbar-nav .nav-link.active {
@@ -29,9 +29,9 @@ body {
   }
   
   .content-section {
-    background: #ffffff;
+    background: #eedbdb02;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #dedce7;
     border-radius: 3px;
     margin-bottom: 20px;
   }
