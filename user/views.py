@@ -13,7 +13,7 @@ def register(request):
             username = form.cleaned_data.get("username")
             # adding a flash message
             messages.success(request, f"Your account has been created. You are now able to log in.")
-            return redirect("login")
+            return redirect('login')
 
     else:
         form = UserRegisterForm()
@@ -21,13 +21,12 @@ def register(request):
     return render(request, 'users/register.html', {'form': form})
 
 # creating a profile view
-@login_required
+@login_required()
 def profile(request):
     if request.method == "POST":
         # pass the current user's info to the form
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(
-            request.POST, request.FILES, instance=request.user.profile)
+        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
 
         # save the data from both forms only when both inputs are valid
         if u_form.is_valid() and p_form.is_valid():
@@ -35,7 +34,7 @@ def profile(request):
             p_form.save()
             messages.success(request, f"Your profile has been updated")
             # avoid the redirect alert from browser when one reloads the page
-            return redirect("profile")
+            return redirect('profile')
 
     else:
         u_form = UserUpdateForm(instance=request.user)

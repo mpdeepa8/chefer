@@ -2,27 +2,36 @@
     {
         "title": "My updated post",
         "content": "my first updated this is exciting",
-        "user_id": 1
+        "user_id": 1,
+        "author" : "ffff"
     },
     {
         "title": "My updated post",
         "content": "my first updated this is exciting",
-        "user_id": 2
+        "user_id": 1,
+        "author" : "ffff"
+
     },
     {
         "title": "My updated post",
         "content": "my first updated this is exciting",
-        "user_id": 1
+        "user_id": 1,
+        "author" : "ffff"
+
     },
     {
         "title": "My updated post",
         "content": "my first updated this is exciting",
-        "user_id": 1
+        "user_id": 1,
+        "author" : "ffff"
+
     },
     {
         "title": "My updated post",
         "content": "my first updated this is exciting",
-        "user_id": 1
+        "user_id": 1,
+        "author" : "ffff"
+
     }
 ] 
     
