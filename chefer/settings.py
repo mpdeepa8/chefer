@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'crispy_forms',
     
+    
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_URL = '/login/' 
@@ -140,3 +143,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
