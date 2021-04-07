@@ -59,7 +59,7 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView, LoginRequiredMixin):
     model = Post
-    fields = ['title', 'content','author', 'date_posted']
+    fields = ['title', 'content']
     template_name = 'blog/post_form.html'
 
 
